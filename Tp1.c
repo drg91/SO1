@@ -26,7 +26,6 @@ void CopiarCadena(char* filename, char* cadena, char* comienzo){
 	}
 	fclose (fd);
 	strcpy (cadena,leer);
-		return;
 }
 void CpuInfo(){
 	char cadena[256];
@@ -37,6 +36,5 @@ void CpuInfo(){
 	CopiarCadena("/proc/cpuinfo",cadena,"model name");
 	sscanf(cadena, "model name : %[^\n]c", modelocpu);
 	printf ("\nTipo de procesador: %s \nModelo: %s\n", tipocpu,modelocpu);
-	return;
 	}
 
